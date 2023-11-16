@@ -73,7 +73,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     localStorage.getItem('token') ? (
       <Route path="/" element={<Navbar/>}>
-        <Route path="/dashboard" element={<DashboardPage/>}/>
+        <Route index element={<DashboardPage/>}/>
         <Route path="*" element={<AccessNotFound/>}/>
       </Route>
     ) : (
